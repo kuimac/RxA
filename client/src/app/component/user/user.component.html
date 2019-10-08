@@ -1,0 +1,15 @@
+<h1>
+  {{title}}
+</h1>
+<a routerLink="/users" routerLinkActive="active">users</a>
+<p>
+  user works!
+</p>
+
+<ul class="userList" *ngIf="users">
+  <li *ngFor="let user of users">
+    <p>ID: <span>{{user.id}}</span></p>
+    <p>名前: <span>{{user.name}}</span></p>
+  </li>
+</ul>
+<router-outlet></router-outlet>
